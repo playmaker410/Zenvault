@@ -8,8 +8,8 @@ const Navbar = ({theme, setTheme}) => {
   return (
 
          
-      <div className='h-25 w-full flex  justify-between items-center lg:px-15 md:px-10 sm:px-10 sticky top-0
-     z-20 backdrop-blur-xl font-semibold bg-[#bbb0bb11] dark:bg-gray-900/70 drop-shadow-md'>
+      <div className='h-20 w-full flex  justify-between items-center lg:px-5 md:px-10 sm:px-10 sticky top-0
+     z-20 backdrop-blur-xl font-semibold bg-white dark:bg-gray-900/70 drop-shadow-md'>
       {/* logo image here*/}
       <div>
       <a href="#">
@@ -43,8 +43,8 @@ const Navbar = ({theme, setTheme}) => {
 
 <div className='flex gap-1.5 '>
   {/* Mobile menu */}
-    <User size='md'color='red' stroke='black' pack='filled' className='lg:hidden '/>
-  <Menu size='md' className='lg:hidden w-1xl ' onClick={() => setIsMenuOpen(!isMenuOpen)} />
+    <User size='sm'color='white' stroke='white' pack='filled' className='lg:hidden bg-black rounded-full' size={window.innerWidth < 768 ? 16 : 32} />
+  <Menu  className='lg:hidden w-1xl ' onClick={() => setIsMenuOpen(!isMenuOpen)} />
   
 </div>
 <div className={`absolute lg:hidden top-24 left-0  w-full bg-white flex-col items-center gap-6 font-semibld font-lg transform transition-transform ${isMenuOpen ? "opacity-100":"opacity-0"}` } 
